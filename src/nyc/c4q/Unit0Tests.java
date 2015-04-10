@@ -13,45 +13,79 @@ public class Unit0Tests {
      */
     public static void main (String args[]) {
       // Use main to test your methods
+        printSumOf1Upto10UsingForLoop();
       printHelloWorld();
+
+
+        //System.out.println(isOdd(8));
+       /// System.out.println(isMultipleOfThree(3));
+        //System.out.println(isOddAndIsMultipleOfThree(6));
+        //System.out.println(repeatStringXTimes("Hello", 1));
+        //System.out.println(declareAndReturnPersonNamedAda());
+        //System.out.println(declareAndReturnPersonNamedAlanTuringFromLondon());
     }
 
     public static void printHelloWorld() {
-      System.out.println("");
+      System.out.println("Hello World");
     }
 
-    public static Object returnPrimitiveBooleanTrue() {
-      return null;
+    public static boolean returnPrimitiveBooleanTrue() {
+      return true;
     }
 
-    public static Object returnPrimitiveInt1729() {
-      return null;
+    public static int returnPrimitiveInt1729() {
+      return 1729;
     }
 
-    public static Object returnPrimitiveDoubleThreePointOneFour() {
-      return null;
+    public static double returnPrimitiveDoubleThreePointOneFour() {
+      return 3.14;
     }
 
-    public static Object returnPrimitiveCharZ() {
-        return false;
+    public static char returnPrimitiveCharZ() {
+        return 'Z';
     }
 
     public static void printSumOf1Upto10UsingForLoop() {
+        for (int i = 0; i < 10; i++) {
+            int sum = 0;
+            sum += i;
+            System.out.println(sum);
+        }
+
     }
 
     public static void printSumOf1Upto10000UsingForLoop() {
+        int sum = 0;
+        for (int i =0; i < 1000; i++) {
+            sum += 1;
+            System.out.println(sum);
+        }
     }
 
-    public static boolean isOdd(int n) {
-      return false;
+    public static boolean isOdd(int n)
+    {
+        //boolean isOdd = true;
+        if(n % 2 != 0)
+        return true;
+        else {
+            return false;
+        }
     }
 
     public static boolean isMultipleOfThree(int n) {
-      return false;
+      if(n % 3 == 0)
+          return true;
+        else{
+          return false;
+      }
     }
 
     public static boolean isOddAndIsMultipleOfThree(int n) {
-      return false;
+      if ((n % 2 !=0) && (n % 3 == 0))
+        return true;
+            else {
+                return false;
+            }
     }
 
     public static String repeatStringXTimes(String input, int times) {
@@ -59,6 +93,13 @@ public class Unit0Tests {
         // return a string that is equal to the input string repeated X times.
         // If "times" is 0 negative, return a blank string.
         // For example, repeatStringXTimes("potato", 5) should return "potatopotatopotatopotatopotato".
+        for (int i = 0; i < times; i++){
+            System.out.print(input);
+        } if (times < 0){
+            return "";
+        }
+
+
         return "";
     }
 
@@ -66,15 +107,25 @@ public class Unit0Tests {
         // Given string "input", return a string that stops at the first occurrence of the character 'q'.
         // For example, given the string "ubiquitous", return "ubi".
         // If the string does not contain a q, then return the empty string "".
+
+
         return "";
     }
 
     public static Person declareAndReturnPersonNamedAda() {
-      return null;
+        Person ada = new Person("Ada");
+        ada.setName("Ada");
+        ada.getName();
+        return ada;
     }
 
+
+
     public static Person declareAndReturnPersonNamedAlanTuringFromLondon() {
-      return null;
+      Person alan = new Person("Alan Turing");
+        alan.setName("Alan Turing");
+        alan.setCity("London");
+        return alan;
     }
 
     public static boolean isFromLondon(Person person) {
